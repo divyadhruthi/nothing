@@ -1,0 +1,119 @@
+{
+  "username": "svr_kishore",
+  "submitStats": {
+    "acSubmissionNum": [
+      {
+        "difficulty": "All",
+        "count": 92,
+        "submissions": 112
+      },
+      {
+        "difficulty": "Easy",
+        "count": 42,
+        "submissions": 58
+      },
+      {
+        "difficulty": "Medium",
+        "count": 41,
+        "submissions": 43
+      },
+      {
+        "difficulty": "Hard",
+        "count": 9,
+        "submissions": 11
+      }
+    ]
+  },
+  "profile": {
+    "ranking": 1859740,
+    "reputation": 0
+  },
+  "ranking": 1859740,
+  "reputation": 0,
+  "calendar": {
+    "activeYears": [
+      2026
+    ],
+    "streak": 15,
+    "totalActiveDays": 65,
+    "submissionCalendar": "{\"1770854400\": 2, \"1772496000\": 2, \"1773360000\": 3, \"1773446400\": 4, \"1773532800\": 1, \"1774224000\": 2, \"1774310400\": 1, \"1777075200\": 1, \"1779580800\": 3, \"1780963200\": 3, \"1781136000\": 2, \"1782432000\": 5, \"1782518400\": 1, \"1782864000\": 1, \"1785974400\": 2, \"1787616000\": 1, \"1788825600\": 7, \"1788912000\": 3, \"1788998400\": 6, \"1789430400\": 1, \"1789516800\": 1, \"1789603200\": 2, \"1789776000\": 6, \"1790035200\": 2, \"1790380800\": 2, \"1790726400\": 2, \"1790812800\": 1, \"1790899200\": 17, \"1790985600\": 2, \"1791072000\": 4, \"1791590400\": 1, \"1791676800\": 1, \"1791763200\": 1, \"1791849600\": 1, \"1791936000\": 1, \"1792022400\": 1, \"1792281600\": 8, \"1792368000\": 3, \"1792454400\": 4, \"1792540800\": 2, \"1792627200\": 1, \"1792713600\": 1, \"1792800000\": 1, \"1792886400\": 6, \"1792972800\": 1, \"1793059200\": 1, \"1793145600\": 1, \"1793232000\": 2, \"1793318400\": 1, \"1793404800\": 1, \"1793491200\": 1, \"1793664000\": 2, \"1793750400\": 1, \"1793836800\": 2, \"1793923200\": 1, \"1794009600\": 1, \"1794096000\": 1, \"1794182400\": 1, \"1794268800\": 2, \"1794355200\": 1, \"1794441600\": 1, \"1794528000\": 1, \"1794614400\": 1, \"1794700800\": 1, \"1794787200\": 1}"
+  },
+  "recentAccepted": [
+    {
+      "title": "Calculate Digit Sum of a String",
+      "titleSlug": "calculate-digit-sum-of-a-string",
+      "timestamp": "1794846042"
+    },
+    {
+      "title": "Number of Sub-arrays With Odd Sum",
+      "titleSlug": "number-of-sub-arrays-with-odd-sum",
+      "timestamp": "1794726844"
+    },
+    {
+      "title": "Minimum Positive Sum Subarray ",
+      "titleSlug": "minimum-positive-sum-subarray",
+      "timestamp": "1794661764"
+    },
+    {
+      "title": "Count Non-Decreasing Subarrays After K Operations",
+      "titleSlug": "count-non-decreasing-subarrays-after-k-operations",
+      "timestamp": "1794591574"
+    },
+    {
+      "title": "Longest Strictly Increasing or Strictly Decreasing Subarray",
+      "titleSlug": "longest-strictly-increasing-or-strictly-decreasing-subarray",
+      "timestamp": "1794502597"
+    },
+    {
+      "title": "Minimum Cost to Acquire Required Items",
+      "titleSlug": "minimum-cost-to-acquire-required-items",
+      "timestamp": "1794416541"
+    },
+    {
+      "title": "Climbing Stairs II",
+      "titleSlug": "climbing-stairs-ii",
+      "timestamp": "1794330155"
+    },
+    {
+      "title": "Create Hello World Function",
+      "titleSlug": "create-hello-world-function",
+      "timestamp": "1794272479"
+    },
+    {
+      "title": "Find Servers That Handled Most Number of Requests",
+      "titleSlug": "find-servers-that-handled-most-number-of-requests",
+      "timestamp": "1794238921"
+    },
+    {
+      "title": "Count Servers that Communicate",
+      "titleSlug": "count-servers-that-communicate",
+      "timestamp": "1794134628"
+    },
+    {
+      "title": "Process Tasks Using Servers",
+      "titleSlug": "process-tasks-using-servers",
+      "timestamp": "1794049735"
+    },
+    {
+      "title": "Count Zero Request Servers",
+      "titleSlug": "count-zero-request-servers",
+      "timestamp": "1793975747"
+    },
+    {
+      "title": "Find the Distance Value Between Two Arrays",
+      "titleSlug": "find-the-distance-value-between-two-arrays",
+      "timestamp": "1793898372"
+    },
+    {
+      "title": "Assign Cookies",
+      "titleSlug": "assign-cookies",
+      "timestamp": "1793895178"
+    },
+    {
+      "title": "Minimum Operations to Make Elements Within K Subarrays Equal",
+      "titleSlug": "minimum-operations-to-make-elements-within-k-subarrays-equal",
+      "timestamp": "1793808829"
+    }
+  ],
+  "lastSynced": "2026-11-17T05:15:31Z"
+}

@@ -1,0 +1,59 @@
+{
+  "extraTopic": "portfolio",
+  "projects": [
+    {
+      "name": "GoYatri",
+      "repo": "Go-Yatri",
+      "description": "Full-stack travel booking platform for buses, trains, and flights, with seat maps and a three-tier role system.",
+      "homepage": "https://goyatri.vercel.app",
+      "tags": ["React", "Firebase", "Full-stack"],
+      "outcome": "A complete multi-mode travel booking experience."
+    },
+    {
+      "name": "Smart-Finance",
+      "repo": "SMART-FINANCE-",
+      "description": "Personal finance tracker with a clear view of spending and practical money insights.",
+      "homepage": "https://smartfinance.up.railway.app",
+      "tags": ["JavaScript", "Node.js", "SQLite"],
+      "outcome": "Deployed live on Railway."
+    },
+    {
+      "name": "ClamIQ",
+      "repo": "ClamIQ",
+      "description": "Interactive quiz app designed to make learning feel engaging and lightweight.",
+      "homepage": "https://svrkishore-glitch.github.io/ClamIQ/",
+      "tags": ["JavaScript", "React"],
+      "outcome": "Deployed on GitHub Pages."
+    },
+    {
+      "name": "Learning Hub",
+      "repo": "learning-hub",
+      "description": "Structured learning website that organizes study material into a clear, guided experience.",
+      "homepage": "https://learningsite.niat.tech",
+      "tags": ["JavaScript", "React"],
+      "outcome": "Built solo as a first-year project."
+    },
+    {
+      "name": "BugHunterAI",
+      "repo": "BugHunterAI",
+      "alwaysShow": true,
+      "description": "Multi-agent GitHub issue resolver built for the Agentathon 2026 hackathon.",
+      "tags": ["Python", "AI", "Automation"],
+      "outcome": "Agentathon 2026 participant project."
+    },
+    {
+      "name": "CultureFit-AI",
+      "repo": "-CultureFit-AI",
+      "description": "Python AI project focused on culture-fit insights.",
+      "tags": ["Python", "AI"],
+      "outcome": "Python project for the CultureFit-AI concept."
+    },
+    {
+      "name": "Laptop Remote Control",
+      "repo": "laptop_control",
+      "description": "Remote laptop control project using a FastAPI backend.",
+      "tags": ["Python", "FastAPI"],
+      "outcome": "FastAPI-powered remote control prototype."
+    }
+  ]
+}

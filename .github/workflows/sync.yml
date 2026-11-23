@@ -1,0 +1,83 @@
+name: Sync portfolio data
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "data/projects.json"
+      - ".github/workflows/sync.yml"
+
+# pages and id-token are passed down to the reusable deploy workflow.
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Never run two syncs at once; a queued run waits instead of racing the push.
+concurrency:
+  group: portfolio-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+      sha: ${{ steps.commit.outputs.sha }}
+      fetch_failed: ${{ steps.fetch.outcome == 'failure' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Fetch profile data
+        id: fetch
+        # A failing source (often the GFG scrape) must not discard the sources that did update.
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/sync.py
+      - name: Commit updated data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*.json index.html
+          if git diff --cached --quiet; then
+            echo "No portfolio data changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "chore: sync portfolio profile data"
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin "$branch" && git push origin "HEAD:$branch"; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying"
+            sleep $((attempt * 5))
+          done
+          echo "::error::Could not push synced data after 3 attempts"
+          exit 1
+
+  deploy:
+    needs: sync
+    if: ${{ needs.sync.outputs.changed == 'true' && github.ref == 'refs/heads/main' }}
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ needs.sync.outputs.sha }}
+
+  # Keep the run red when a source failed, after the good data was committed and deployed.
+  report:
+    needs: [sync, deploy]
+    if: ${{ always() && needs.sync.outputs.fetch_failed == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "::error::One or more profile sources failed. See the warnings on the sync job; other sources were still committed."
+          exit 1
